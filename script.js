@@ -111,11 +111,18 @@ const bondFilms = [
 ];
 
 // 1)
-let bondTitles = [];
-for(let i = 0; i < bondFilms.length; i ++) {
-  bondTitles.push(bondFilms[i].title)
+function listOfBondTitles() {
+    let bondTitles = [];
+    //either for loop works:
+    // for(let i = 0; i < bondFilms.length; i ++) {
+    //   bondTitles.push(bondFilms[i].title)
+    // }
+    for(let film of bondFilms) {
+        bondTitles.push(film.title)
+    }
+    console.log("List of Bond Titles\n", bondTitles)
 }
-console.log(bondTitles)
+listOfBondTitles();
 
 // 2)
 let oddBonds = [];
@@ -131,6 +138,4 @@ let gross = 0;
 for(let i = 0; i < bondFilms.length; i ++) {
   gross = gross + parseInt(bondFilms[i].gross.replace(/\$|,/g, ''))
 };
-
-
 console.log('$',gross)
