@@ -277,8 +277,14 @@ function oddBondTitles() {
 oddBondTitles();
 
 // 3)
-let gross = 0;
-for (let i = 0; i < bondFilms.length; i++) {
-  gross = gross + parseInt(bondFilms[i].gross.replace(/\$|,/g, ""));
+function gross() {
+    let gross = 0;
+    // for (let i = 0; i < bondFilms.length; i++) {
+    //   gross = gross + parseInt(bondFilms[i].gross.replace(/\$|,/g, ""));
+    // }
+    for(let film of bondFilms) {
+        gross = gross + parseInt(film.gross.replace(/\$|,/g, ""));
+    }
+    console.log("$\n", gross);
 }
-console.log("$", gross);
+gross();
