@@ -11,7 +11,10 @@ const rainbowArray = [
 ];
 
 // 2)
-console.log(`${rainbowArray[4]} \n`);
+function printColor(index) {
+    console.log(`${rainbowArray[index]} \n`);
+}
+printColor(4)
 
 // 3)
 const cathy = {
@@ -22,7 +25,13 @@ const cathy = {
 };
 
 // 4)
-console.log(`${cathy.hobby} \n`);
+function printCathyHobby() {
+    console.log(`Cathy's fav food is: ${cathy.food}`);
+    console.log(`Cathy's fav hobby is:  ${cathy.hobby}`);
+    console.log(`Cathy's town is:  ${cathy.town}`);
+    console.log(`Cathy's fav data type is:  ${cathy.favDatatype} \n`);
+}
+printCathyHobby()
 
 // Crazy object
 const crazyObject = {
